@@ -84,3 +84,6 @@ if (BMIMark > BMIJohn) {
 }
 
 console.log(print1);
+
+//type coercion
+console.log('I am ' + 23 + 'years old')
