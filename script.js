@@ -181,3 +181,39 @@ if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
 } else {
   console.log("No team has won");
 }
+
+const day = "wednesday";
+
+// switch (day) {
+//   case "monday":
+//     console.log("Plan course structure");
+//     break;
+//   case "tuesday":
+//     console.log("Go for Gym");
+//     break;
+//   default:
+//     console.log("Not a valid day");
+//     break;
+// }
+
+if (day === "monday") {
+  console.log("It`s Monday");
+} else if (day === "tuesday") {
+  console.log("It`s Tuesday");
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("its tuesday and thursday");
+} else {
+  console.log("rest of the day");
+}
+
+console.log(`I'm ${1996 - 2025} years old`);
+
+let age = 28;
+
+// const legalAge = age >= 18 ? "can drive" : "can not drive";
+
+// console.log(legalAge);
+
+console.log(`Am I eligible  ${age >= 18 ? "to drive" : "not to drive"}`);
+
+// Section 2 complete
