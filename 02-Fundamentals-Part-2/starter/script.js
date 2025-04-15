@@ -66,3 +66,54 @@ function fruitProcessor(apples, oranges) {
 }
 
 console.log(fruitProcessor(4, 8));
+
+//Codeing challenge funtion
+
+const calcAverage = (a, b, c) => {
+  return (a + b + c) / 3;
+};
+
+const scoreDolphins = calcAverage(44, 23, 71);
+const scoreKoalas = calcAverage(65, 54, 49);
+
+const checkWinner = (avgDolphins, avgKoalas) => {
+  if (scoreKoalas >= scoreDolphins * 2) {
+    console.log(`Koalas win (${scoreKoalas} vs. ${scoreDolphins})`);
+    return scoreKoalas;
+  } else if (scoreDolphins >= scoreKoalas * 2) {
+    console.log(`Koalas win (${scoreDolphins} vs. ${scoreKoalas})`);
+    return scoreDolphins;
+  } else {
+    console.log("No team wins...");
+  }
+};
+
+console.log(checkWinner(scoreDolphins, scoreKoalas));
+
+//Array
+
+const friends = ["a", "b", "c", "d"];
+console.log(friends.length);
+friends[2] = "g";
+console.log(friends);
+
+const firstName = "Israq";
+const israq = [firstName, "syed", 2025 - 1996, friends];
+console.log(israq);
+
+console.log(israq.length);
+
+const calcAge = function (birthYear) {
+  const age = 2025 - birthYear;
+  return age;
+};
+
+const years = [1991, 1887, 1900, 2000, 1971];
+
+const ages = [
+  calcAge(years[0]),
+  calcAge(years[2]),
+  calcAge(years[years.length - 2]),
+];
+
+console.log(ages);
