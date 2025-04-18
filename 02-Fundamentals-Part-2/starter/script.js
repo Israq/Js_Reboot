@@ -117,3 +117,60 @@ const ages = [
 ];
 
 console.log(ages);
+
+//Array Operation
+
+//Add elements
+const friendList = ["Micheal", "Steven", "Peter"];
+friendList.push("Jay");
+console.log(friendList);
+
+friendList.unshift("John");
+console.log(friendList);
+
+//Remove Element
+
+friendList.pop();
+console.log(friendList);
+//pop removes the last item
+
+friendList.shift();
+console.log(friendList);
+//Shift removes the 1st item
+
+console.log(friendList.indexOf("Steven"));
+// shows the index of item
+
+console.log(friendList.includes("Steven"));
+console.log(friendList.includes("Ketty"));
+// shows present/not boolean
+
+const jonas = {
+  firstName: "Jonasjonas",
+  lastName: "Schmedment",
+  age: 2025 - 1996,
+  job: "teacher",
+  friends: ["Micheal", "Steven", "Peter"],
+};
+
+const interestedIn =
+  "Want to know more about jonas? choose between firstName, lastName, age, job and friends";
+
+// console.log(jonas[prompt(interestedIn)]);
+
+//adding new objects
+
+jonas.location = "Portugal";
+jonas["twitter"] = "@jonasscmhmedment";
+console.log(jonas);
+
+//challenge
+//"Jonas has 3 friends, and his best friend is called Micheal"
+
+const friendsTotal = jonas.friends.length;
+console.log(friendsTotal);
+const bestFriend = jonas.friends[0];
+console.log(bestFriend);
+console.log(
+  `Jonas has ${friendsTotal} friends, and his best friend is called ${bestFriend}`
+);
