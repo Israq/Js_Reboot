@@ -145,13 +145,13 @@ console.log(friendList.includes("Steven"));
 console.log(friendList.includes("Ketty"));
 // shows present/not boolean
 
-const jonas = {
-  firstName: "Jonasjonas",
-  lastName: "Schmedment",
-  age: 2025 - 1996,
-  job: "teacher",
-  friends: ["Micheal", "Steven", "Peter"],
-};
+// const jonas = {
+//   firstName: "Jonasjonas",
+//   lastName: "Schmedment",
+//   age: 2025 - 1996,
+//   job: "teacher",
+//   friends: ["Micheal", "Steven", "Peter"],
+// };
 
 const interestedIn =
   "Want to know more about jonas? choose between firstName, lastName, age, job and friends";
@@ -160,17 +160,150 @@ const interestedIn =
 
 //adding new objects
 
-jonas.location = "Portugal";
-jonas["twitter"] = "@jonasscmhmedment";
-console.log(jonas);
+// jonas.location = "Portugal";
+// jonas["twitter"] = "@jonasscmhmedment";
+// console.log(jonas);
 
 //challenge
 //"Jonas has 3 friends, and his best friend is called Micheal"
 
-const friendsTotal = jonas.friends.length;
-console.log(friendsTotal);
-const bestFriend = jonas.friends[0];
-console.log(bestFriend);
+// const friendsTotal = jonas.friends.length;
+// console.log(friendsTotal);
+// const bestFriend = jonas.friends[0];
+// console.log(bestFriend);
+// console.log(
+//   `Jonas has ${friendsTotal} friends, and his best friend is called ${bestFriend}`
+// );
+
+//object method
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedment",
+  birthYear: 1991,
+  job: "teacher",
+  friends: ["Micheal", "Steven", "Peter"],
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+  getLicenseStatus() {
+    return jonas.age > 18 ? "has License" : "does not have License";
+  },
+};
+
+console.log(jonas.calcAge());
+console.log(jonas.age);
+
+//challenge
+//"Jonas is a 46 years old teacher, and he has a drivers license"
+
+// const license = function (age) {
+//   if (jonas.age > 18) {
+//     return `has driversLicense`;
+//   } else {
+//     return `doesn't have driversLicense`;
+//   }
+// };
+// jonas.calcAge();
+
 console.log(
-  `Jonas has ${friendsTotal} friends, and his best friend is called ${bestFriend}`
+  `${jonas.firstName} is a ${jonas.age} years old ${
+    jonas.job
+  } and he ${jonas.getLicenseStatus()} `
 );
+
+//object method coding challenge
+/* Write your code below. Good luck! 🙂 */
+
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  },
+};
+
+const john = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  },
+};
+
+console.log(mark.calcBMI());
+console.log(john.calcBMI());
+
+const higherBMI = function higherbmi() {
+  return mark.calcBMI() > john.calcBMI()
+    ? console.log(
+        `${mark.fullName}'s BMI ${mark.calcBMI()} is higher than ${
+          john.fullName
+        }'s ${john.calcBMI()}!`
+      )
+    : console.log(
+        `${john.fullName}'s BMI ${john.calcBMI()} is higher than ${
+          mark.fullName
+        }'s ${mark.calcBMI()}!`
+      );
+};
+
+higherBMI();
+
+//For loop
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition ${rep}`);
+}
+
+//Looping arrays, breaking and continue
+
+const jonasArray = [
+  "Jonas",
+  "Schmedment",
+  1991,
+  "teacher",
+  ["Micheal", "Steven", "Peter"],
+];
+
+const types = [];
+
+for (let i = 0; i < jonasArray.length; i++) {
+  console.log(jonasArray[i], typeof jonasArray[i]);
+  //Filling the array pushing at the end of the array
+  types.push(typeof jonasArray[i]);
+}
+
+console.log(types);
+
+const birthYears = [1991, 2020, 1996, 2000, 2011];
+const calcAges = [];
+
+for (let index = 0; index < birthYears.length; index++) {
+  calcAges.push(2037 - birthYears[index]);
+}
+console.log(calcAges);
+
+//Continue and Break
+console.log("--ONLY STRINGS--");
+const jonasArray2 = [
+  "Jonas",
+  "Schmedment",
+  1991,
+  "teacher",
+  ["Micheal", "Steven", "Peter"],
+];
+console.log("--ONLY STRINGS will print and !strings will ignore--");
+for (let i = 0; i < jonasArray2.length; i++) {
+  if (typeof jonasArray2[i] !== "string") continue;
+  console.log(jonasArray2[i], typeof jonasArray2[i]);
+}
+console.log("--When Number Comes the loop will break--");
+for (let i = 0; i < jonasArray2.length; i++) {
+  if (typeof jonasArray2[i] === "number") break;
+  console.log(jonasArray2[i], typeof jonasArray2[i]);
+}
