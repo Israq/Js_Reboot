@@ -307,3 +307,45 @@ for (let i = 0; i < jonasArray2.length; i++) {
   if (typeof jonasArray2[i] === "number") break;
   console.log(jonasArray2[i], typeof jonasArray2[i]);
 }
+
+//Loop Backwards
+
+const jonasArray3 = [
+  "Jonas",
+  "Schmedment",
+  1991,
+  "teacher",
+  ["Micheal", "Steven", "Peter"],
+];
+//0,1,2,3,4,
+//4,3,2,1,0
+for (let i = jonasArray3.length - 1; i >= 0; i--) {
+  console.log(i, jonasArray3[i]);
+}
+
+//Loop over loop
+for (let excercise = 0; excercise <= 7; excercise++) {
+  console.log(`---Starting Excercise ${excercise}`);
+  for (let rep = 0; rep < 6; rep++) {
+    console.log(`Excercise: ${excercise}: Lifting weight repetition ${rep}`);
+  }
+}
+
+//While loop
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition ${rep}`);
+}
+
+let rep = 1;
+while (rep <= 10) {
+  console.log(`WHILE- Continue the repetition:${rep}`);
+  rep++;
+}
+
+//without counter
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+  console.log(`You rolled a dice ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+}
